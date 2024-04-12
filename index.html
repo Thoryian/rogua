@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Start Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // JavaScript to handle page load event
+    window.addEventListener('load', function () {
+      const loader = document.getElementById('loader');
+      loader.classList.add('fade-out');
+
+      // Remove the loader from the DOM after fade out
+      loader.addEventListener('transitionend', function () {
+        loader.style.display = 'none';
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <!-- Loader element -->
+  <div id="loader" class="loader"></div>
+
+  <!-- Content container -->
+  <div class="container">
+    <img src="background.jpg" alt="Background Image" class="background-image">
+    <div class="content">
+      <div class="search-container">
+        <h1>Welcome, Rogua<h1>
+            <form action="https://www.bing.com/search" method="GET" class="search-form">
+              <input type="text" name="q" placeholder="Search..." class="search-bar" autofocus>
+              <button type="submit" class="search-button">Search</button>
+            </form>
+      </div>
+      <div class="quick-links">
+        <h2>Quick Links</h2>
+        <ul class="links-list">
+          <li><a href="https://scratch.mit.edu" target="_blank"><span class="icon"
+                style="background-image: url('scratch.png');"></span>Scratch</a></li>
+          <li><a href="https://youtube.com" target="_blank"><span class="icon"
+                style="background-image: url('youtube.png');"></span>YouTube</a></li>
+          <li><a href="https://docs.google.com" target="_blank"><span class="icon"
+                style="background-image: url('docs.png');"></span>Google Docs</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
